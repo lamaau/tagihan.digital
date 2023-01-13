@@ -2,6 +2,14 @@
 import Container from "./Container.astro";
 ---
 
+<script>
+  const element = document.getElementById("toggle_nav");
+
+  window.addEventListener("popstate", function () {
+    element.checked = false;
+  });
+</script>
+
 <header>
   <nav class="z-10 w-full absolute">
     <Container>
